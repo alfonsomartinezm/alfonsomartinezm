@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UFC - Los Mejores Peleadores Libra por Libra</title>
+    <title>UFC - Ultimate Fighting Championship | Divisiones y Campeones</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -36,9 +36,22 @@
             color: #d20a0a;
             border-bottom: 2px solid #d20a0a;
             padding-bottom: 5px;
+            margin-top: 30px;
         }
         
-        .fighter {
+        h3 {
+            color: #333;
+        }
+        
+        .intro {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .division {
             background: white;
             margin: 20px 0;
             padding: 20px;
@@ -49,30 +62,31 @@
             align-items: center;
         }
         
-        .fighter-info {
+        .division-info {
             flex: 1;
             min-width: 300px;
             padding: 15px;
         }
         
-        .fighter-image {
+        .division-image {
             flex: 1;
             min-width: 200px;
             text-align: center;
         }
         
-        .fighter-image img {
+        .division-image img {
             max-width: 100%;
             height: auto;
             border-radius: 5px;
             border: 3px solid #d20a0a;
         }
         
-        .stats {
+        .champion {
             background: #f9f9f9;
-            padding: 10px;
-            margin-top: 10px;
+            padding: 15px;
+            margin-top: 15px;
             border-radius: 5px;
+            border-left: 4px solid #d20a0a;
         }
         
         footer {
@@ -83,8 +97,29 @@
             margin-top: 20px;
         }
         
+        .division-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .division-table th, .division-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .division-table th {
+            background-color: #d20a0a;
+            color: white;
+        }
+        
+        .division-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
         @media (max-width: 768px) {
-            .fighter {
+            .division {
                 flex-direction: column;
             }
         }
@@ -94,104 +129,214 @@
     <header>
         <div class="container">
             <h1>UFC - Ultimate Fighting Championship</h1>
-            <p>Los mejores peleadores libra por libra</p>
+            <p>La mayor organización de Artes Marciales Mixtas del mundo</p>
         </div>
     </header>
     
     <div class="container">
-        <section id="pound-for-pound">
-            <h2>Ranking Libra por Libra 2023</h2>
-            
-            <div class="fighter">
-                <div class="fighter-image">
-                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/ISLAM_MAKHACHEV_L_BELT_07-08.png" alt="Islam Makhachev">
-                </div>
-                <div class="fighter-info">
-                    <h3>1. Islam Makhachev</h3>
-                    <p>Campeón de peso ligero de la UFC con un récord de 24-1. Discípulo de Khabib Nurmagomedov, Makhachev ha dominado la división con su excelente grappling y mejora constante en el striking.</p>
-                    <div class="stats">
-                        <p><strong>Récord:</strong> 24-1-0</p>
-                        <p><strong>Edad:</strong> 31 años</p>
-                        <p><strong>Altura:</strong> 1.78 m</p>
-                        <p><strong>Procedencia:</strong> Daguestán, Rusia</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="fighter">
-                <div class="fighter-image">
-                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/JON_JONES_L_07-29.png" alt="Jon Jones">
-                </div>
-                <div class="fighter-info">
-                    <h3>2. Jon "Bones" Jones</h3>
-                    <p>Considerado por muchos como el mejor peleador de todos los tiempos, Jones regresó en 2023 para ganar el título de peso pesado. Con un estilo único y un alcance extraordinario, domina a sus oponentes con versatilidad.</p>
-                    <div class="stats">
-                        <p><strong>Récord:</strong> 27-1-0 (1 NC)</p>
-                        <p><strong>Edad:</strong> 35 años</p>
-                        <p><strong>Altura:</strong> 1.93 m</p>
-                        <p><strong>Procedencia:</strong> Rochester, Nueva York, EE.UU.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="fighter">
-                <div class="fighter-image">
-                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/ALEXANDER_VOLKANOVSKI_L_BELT_07-08.png" alt="Alexander Volkanovski">
-                </div>
-                <div class="fighter-info">
-                    <h3>3. Alexander "The Great" Volkanovski</h3>
-                    <p>Campeón de peso pluma, Volkanovski ha defendido exitosamente su título múltiples veces. A pesar de su corta estatura, su timing, precisión y resistencia lo hacen uno de los mejores.</p>
-                    <div class="stats">
-                        <p><strong>Récord:</strong> 26-2-0</p>
-                        <p><strong>Edad:</strong> 34 años</p>
-                        <p><strong>Altura:</strong> 1.68 m</p>
-                        <p><strong>Procedencia:</strong> Wollongong, Australia</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="fighter">
-                <div class="fighter-image">
-                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/LEON_EDWARDS_L_BELT_07-29.png" alt="Leon Edwards">
-                </div>
-                <div class="fighter-info">
-                    <h3>4. Leon "Rocky" Edwards</h3>
-                    <p>Campeón de peso welter, Edwards sorprendió al mundo al noquear a Kamaru Usman con un head kick en el último minuto de su pelea. Técnicamente sólido en todas las áreas.</p>
-                    <div class="stats">
-                        <p><strong>Récord:</strong> 21-3-0 (1 NC)</p>
-                        <p><strong>Edad:</strong> 31 años</p>
-                        <p><strong>Altura:</strong> 1.83 m</p>
-                        <p><strong>Procedencia:</strong> Birmingham, Inglaterra</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="fighter">
-                <div class="fighter-image">
-                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/ISRAEL_ADESANYA_L_07-29.png" alt="Israel Adesanya">
-                </div>
-                <div class="fighter-info">
-                    <h3>5. Israel "The Last Stylebender" Adesanya</h3>
-                    <p>Ex campeón de peso mediano y uno de los strikers más técnicos en la historia de la UFC. Con un background en kickboxing, Adesanya combina movimientos fluidos con precisión mortal.</p>
-                    <div class="stats">
-                        <p><strong>Récord:</strong> 24-2-0</p>
-                        <p><strong>Edad:</strong> 34 años</p>
-                        <p><strong>Altura:</strong> 1.93 m</p>
-                        <p><strong>Procedencia:</strong> Lagos, Nigeria / Auckland, Nueva Zelanda</p>
-                    </div>
-                </div>
+        <section id="about-ufc">
+            <div class="intro">
+                <h2>¿Qué es la UFC?</h2>
+                <p>La <strong>Ultimate Fighting Championship (UFC)</strong> es la organización líder en Artes Marciales Mixtas (MMA) a nivel mundial. Fundada en 1993, la UFC ha revolucionado el mundo de los deportes de combate, combinando técnicas de boxeo, jiu-jitsu brasileño, lucha, muay thai, judo y otras disciplinas.</p>
+                
+                <p>La UFC comenzó como un torneo para determinar qué arte marcial era más efectiva, pero evolucionó hacia un deporte organizado con reglas estrictas y categorías de peso. Hoy cuenta con más de 600 peleadores en su roster y realiza eventos en todo el mundo.</p>
+                
+                <p>La organización es conocida por sus emocionantes tarjetas de peleas, personalidades carismáticas y el alto nivel de competencia. Los peleadores de la UFC son considerados los mejores artistas marciales mixtos del planeta.</p>
             </div>
         </section>
         
-        <section id="about-ufc">
-            <h2>Sobre la UFC</h2>
-            <p>La Ultimate Fighting Championship (UFC) es la organización más importante de artes marciales mixtas (MMA) en el mundo. Fundada en 1993, la UFC ha crecido hasta convertirse en un fenómeno global, presentando a los mejores peleadores en diversas categorías de peso.</p>
-            <p>El ranking "libra por libra" (pound-for-pound) clasifica a los peleadores independientemente de su categoría de peso, evaluando quiénes serían los mejores si todos tuvieran el mismo tamaño.</p>
+        <section id="divisions">
+            <h2>Divisiones de Peso en la UFC</h2>
+            
+            <table class="division-table">
+                <thead>
+                    <tr>
+                        <th>División</th>
+                        <th>Límite de peso</th>
+                        <th>Campeón actual</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Peso Mosca</td>
+                        <td>Hasta 125 lbs (56.7 kg)</td>
+                        <td>Demetrious Johnson</td>
+                    </tr>
+                    <tr>
+                        <td>Peso Gallo</td>
+                        <td>Hasta 135 lbs (61.2 kg)</td>
+                        <td>Dominick Cruz</td>
+                    </tr>
+                    <tr>
+                        <td>Peso Pluma</td>
+                        <td>Hasta 145 lbs (65.8 kg)</td>
+                        <td>José Aldo</td>
+                    </tr>
+                    <tr>
+                        <td>Peso Ligero</td>
+                        <td>Hasta 155 lbs (70.3 kg)</td>
+                        <td>Khabib Nurmagomedov</td>
+                    </tr>
+                    <tr>
+                        <td>Peso Welter</td>
+                        <td>Hasta 170 lbs (77.1 kg)</td>
+                        <td>Anderson Silva</td>
+                    </tr>
+                    <tr>
+                        <td>Peso Medio</td>
+                        <td>Hasta 185 lbs (83.9 kg)</td>
+                        <td>Georges St-Pierre</td>
+                    </tr>
+                    <tr>
+                        <td>Peso Semipesado</td>
+                        <td>Hasta 205 lbs (93.0 kg)</td>
+                        <td>Jon Jones</td>
+                    </tr>
+                    <tr>
+                        <td>Peso Pesado</td>
+                        <td>Hasta 265 lbs (120.2 kg)</td>
+                        <td>Stipe Miocic</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>Grandes Campeones de la UFC</h2>
+            
+            <div class="division">
+                <div class="division-image">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-07/JOHNSON_DEMETRIOUS_L_07-24.png" alt="Demetrious Johnson">
+                </div>
+                <div class="division-info">
+                    <h3>Peso Mosca: Demetrious "Mighty Mouse" Johnson</h3>
+                    <p>Considerado por muchos como el mejor peso mosca de todos los tiempos, Johnson defendió su título 11 veces consecutivas, récord en la UFC. Conocido por su velocidad, técnica y versatilidad.</p>
+                    <div class="champion">
+                        <p><strong>Récord en UFC:</strong> 15-2-1</p>
+                        <p><strong>Reinado:</strong> 2012-2018</p>
+                        <p><strong>Edad:</strong> 37 años</p>
+                        <p><strong>Estilo:</strong> Wrestling, Jiu-Jitsu Brasileño</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="division">
+                <div class="division-image">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/image/ufc-fighter-container/7266/profile-galery/fullbodyleft-picture/CRUZ_DOMINICK_L.png" alt="Dominick Cruz">
+                </div>
+                <div class="division-info">
+                    <h3>Peso Gallo: Dominick "The Dominator" Cruz</h3>
+                    <p>Uno de los pesos gallo más técnicos de la historia. Cruz revolucionó el movimiento en MMA con su estilo único de footwork y angles. Dos veces campeón de peso gallo de la UFC.</p>
+                    <div class="champion">
+                        <p><strong>Récord en UFC:</strong> 8-3</p>
+                        <p><strong>Reinado:</strong> 2010-2011, 2016</p>
+                        <p><strong>Edad:</strong> 38 años</p>
+                        <p><strong>Estilo:</strong> Boxeo, Wrestling</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="division">
+                <div class="division-image">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-07/ALDO_JOSE_L_07-10.png" alt="José Aldo">
+                </div>
+                <div class="division-info">
+                    <h3>Peso Pluma: José "Scarface" Aldo</h3>
+                    <p>Dominó la división de peso pluma durante una década. Campeón inaugural de peso pluma de la UFC y ex campeón de WEC. Conocido por sus devastadores low kicks y takedown defense.</p>
+                    <div class="champion">
+                        <p><strong>Récord en UFC:</strong> 15-7</p>
+                        <p><strong>Reinado:</strong> 2010-2015</p>
+                        <p><strong>Edad:</strong> 37 años</p>
+                        <p><strong>Estilo:</strong> Muay Thai, Jiu-Jitsu Brasileño</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="division">
+                <div class="division-image">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/image/ufc-fighter-container/6829/profile-galery/fullbodyleft-picture/NURMAGOMEDOV_KHABIB_L.png" alt="Khabib Nurmagomedov">
+                </div>
+                <div class="division-info">
+                    <h3>Peso Ligero: Khabib "The Eagle" Nurmagomedov</h3>
+                    <p>Uno de los peleadores más dominantes en la historia de la UFC. Retirado invicto con récord de 29-0. Su estilo de grappling basado en sambo era casi imposible de contrarrestar.</p>
+                    <div class="champion">
+                        <p><strong>Récord en UFC:</strong> 13-0</p>
+                        <p><strong>Reinado:</strong> 2018-2020</p>
+                        <p><strong>Edad:</strong> 35 años</p>
+                        <p><strong>Estilo:</strong> Sambo, Wrestling</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="division">
+                <div class="division-image">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-07/SILVA_ANDERSON_L_07-11.png" alt="Anderson Silva">
+                </div>
+                <div class="division-info">
+                    <h3>Peso Welter: Anderson "The Spider" Silva</h3>
+                    <p>Aunque más conocido por su reinado en peso medio, Silva también tuvo éxito en peso welter. Considerado por muchos como el mejor striker en la historia de la UFC, con 16 victorias consecutivas.</p>
+                    <div class="champion">
+                        <p><strong>Récord en UFC:</strong> 17-7 (1 NC)</p>
+                        <p><strong>Reinado en Medio:</strong> 2006-2013</p>
+                        <p><strong>Edad:</strong> 48 años</p>
+                        <p><strong>Estilo:</strong> Muay Thai, Taekwondo, Boxeo</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="division">
+                <div class="division-image">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-07/ST-PIERRE_GEORGES_L_07-24.png" alt="Georges St-Pierre">
+                </div>
+                <div class="division-info">
+                    <h3>Peso Medio: Georges "Rush" St-Pierre</h3>
+                    <p>Considerado el mejor peso welter de todos los tiempos, GSP también ganó el título de peso medio. Conocido por su increíble atletismo, disciplina y versatilidad en todas las áreas del juego.</p>
+                    <div class="champion">
+                        <p><strong>Récord en UFC:</strong> 20-2</p>
+                        <p><strong>Reinado en Welter:</strong> 2007-2013</p>
+                        <p><strong>Edad:</strong> 42 años</p>
+                        <p><strong>Estilo:</strong> Kyokushin Karate, Wrestling, Jiu-Jitsu</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="division">
+                <div class="division-image">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/JON_JONES_L_07-29.png" alt="Jon Jones">
+                </div>
+                <div class="division-info">
+                    <h3>Peso Semipesado: Jon "Bones" Jones</h3>
+                    <p>Considerado por muchos como el mejor peleador de todos los tiempos. Dominó la división de peso semipesado durante una década con su alcance único y versatilidad en todas las facetas del juego.</p>
+                    <div class="champion">
+                        <p><strong>Récord en UFC:</strong> 21-1 (1 NC)</p>
+                        <p><strong>Reinado en Semipesado:</strong> 2011-2015, 2017-2020</p>
+                        <p><strong>Edad:</strong> 36 años</p>
+                        <p><strong>Estilo:</strong> Wrestling, Gaidojutsu, Jiu-Jitsu</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="division">
+                <div class="division-image">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-07/MIOCIC_STIPE_L_07-10.png" alt="Stipe Miocic">
+                </div>
+                <div class="division-info">
+                    <h3>Peso Pesado: Stipe Miocic</h3>
+                    <p>El campeón de peso pesado con más defensas exitosas en la historia de la UFC. Ex bombero profesional, Miocic combinaba poder de golpe con sólidas habilidades de wrestling.</p>
+                    <div class="champion">
+                        <p><strong>Récord en UFC:</strong> 14-4</p>
+                        <p><strong>Reinado:</strong> 2016-2018, 2019-2021</p>
+                        <p><strong>Edad:</strong> 41 años</p>
+                        <p><strong>Estilo:</strong> Boxeo, Wrestling</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     
     <footer>
         <div class="container">
+            <p>&copy; 2023 UFC Fan Page. Esta es una página de aficionados y no está afiliada a la UFC.</p>
+            <p>Todas las imágenes son propiedad de la UFC.</p>
+        </div>
     </footer>
 </body>
 </html>
