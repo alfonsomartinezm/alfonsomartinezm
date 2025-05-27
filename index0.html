@@ -1,37 +1,200 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-  background-image: url('/w3images/forestbridge.jpg');
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFC - Los Mejores Peleadores Libra por Libra</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            background-color: #d20a0a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #d20a0a;
+            border-bottom: 2px solid #d20a0a;
+            padding-bottom: 5px;
+        }
+        
+        .fighter {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .fighter-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 15px;
+        }
+        
+        .fighter-image {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        .fighter-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 3px solid #d20a0a;
+        }
+        
+        .stats {
+            background: #f9f9f9;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .fighter {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Logo
-  </div>
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">UFC</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">35 days left</p>
-  </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-    Powered by <a href="unnamed.jpg" target="_blank">w3.css</a>
-  </div>
-</div>
-
+    <header>
+        <div class="container">
+            <h1>UFC - Ultimate Fighting Championship</h1>
+            <p>Los mejores peleadores libra por libra</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="pound-for-pound">
+            <h2>Ranking Libra por Libra 2023</h2>
+            
+            <div class="fighter">
+                <div class="fighter-image">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/ISLAM_MAKHACHEV_L_BELT_07-08.png" alt="Islam Makhachev">
+                </div>
+                <div class="fighter-info">
+                    <h3>1. Islam Makhachev</h3>
+                    <p>Campeón de peso ligero de la UFC con un récord de 24-1. Discípulo de Khabib Nurmagomedov, Makhachev ha dominado la división con su excelente grappling y mejora constante en el striking.</p>
+                    <div class="stats">
+                        <p><strong>Récord:</strong> 24-1-0</p>
+                        <p><strong>Edad:</strong> 31 años</p>
+                        <p><strong>Altura:</strong> 1.78 m</p>
+                        <p><strong>Procedencia:</strong> Daguestán, Rusia</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fighter">
+                <div class="fighter-image">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/JON_JONES_L_07-29.png" alt="Jon Jones">
+                </div>
+                <div class="fighter-info">
+                    <h3>2. Jon "Bones" Jones</h3>
+                    <p>Considerado por muchos como el mejor peleador de todos los tiempos, Jones regresó en 2023 para ganar el título de peso pesado. Con un estilo único y un alcance extraordinario, domina a sus oponentes con versatilidad.</p>
+                    <div class="stats">
+                        <p><strong>Récord:</strong> 27-1-0 (1 NC)</p>
+                        <p><strong>Edad:</strong> 35 años</p>
+                        <p><strong>Altura:</strong> 1.93 m</p>
+                        <p><strong>Procedencia:</strong> Rochester, Nueva York, EE.UU.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fighter">
+                <div class="fighter-image">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/ALEXANDER_VOLKANOVSKI_L_BELT_07-08.png" alt="Alexander Volkanovski">
+                </div>
+                <div class="fighter-info">
+                    <h3>3. Alexander "The Great" Volkanovski</h3>
+                    <p>Campeón de peso pluma, Volkanovski ha defendido exitosamente su título múltiples veces. A pesar de su corta estatura, su timing, precisión y resistencia lo hacen uno de los mejores.</p>
+                    <div class="stats">
+                        <p><strong>Récord:</strong> 26-2-0</p>
+                        <p><strong>Edad:</strong> 34 años</p>
+                        <p><strong>Altura:</strong> 1.68 m</p>
+                        <p><strong>Procedencia:</strong> Wollongong, Australia</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fighter">
+                <div class="fighter-image">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/LEON_EDWARDS_L_BELT_07-29.png" alt="Leon Edwards">
+                </div>
+                <div class="fighter-info">
+                    <h3>4. Leon "Rocky" Edwards</h3>
+                    <p>Campeón de peso welter, Edwards sorprendió al mundo al noquear a Kamaru Usman con un head kick en el último minuto de su pelea. Técnicamente sólido en todas las áreas.</p>
+                    <div class="stats">
+                        <p><strong>Récord:</strong> 21-3-0 (1 NC)</p>
+                        <p><strong>Edad:</strong> 31 años</p>
+                        <p><strong>Altura:</strong> 1.83 m</p>
+                        <p><strong>Procedencia:</strong> Birmingham, Inglaterra</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fighter">
+                <div class="fighter-image">
+                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/ISRAEL_ADESANYA_L_07-29.png" alt="Israel Adesanya">
+                </div>
+                <div class="fighter-info">
+                    <h3>5. Israel "The Last Stylebender" Adesanya</h3>
+                    <p>Ex campeón de peso mediano y uno de los strikers más técnicos en la historia de la UFC. Con un background en kickboxing, Adesanya combina movimientos fluidos con precisión mortal.</p>
+                    <div class="stats">
+                        <p><strong>Récord:</strong> 24-2-0</p>
+                        <p><strong>Edad:</strong> 34 años</p>
+                        <p><strong>Altura:</strong> 1.93 m</p>
+                        <p><strong>Procedencia:</strong> Lagos, Nigeria / Auckland, Nueva Zelanda</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about-ufc">
+            <h2>Sobre la UFC</h2>
+            <p>La Ultimate Fighting Championship (UFC) es la organización más importante de artes marciales mixtas (MMA) en el mundo. Fundada en 1993, la UFC ha crecido hasta convertirse en un fenómeno global, presentando a los mejores peleadores en diversas categorías de peso.</p>
+            <p>El ranking "libra por libra" (pound-for-pound) clasifica a los peleadores independientemente de su categoría de peso, evaluando quiénes serían los mejores si todos tuvieran el mismo tamaño.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 UFC Fan Page. Esta es una página de aficionados y no está afiliada a la UFC.</p>
+            <p>Todas las imágenes son propiedad de la UFC.</p>
+        </div>
+    </footer>
 </body>
 </html>
