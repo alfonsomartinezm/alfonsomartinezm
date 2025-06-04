@@ -1,342 +1,143 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UFC - Ultimate Fighting Championship | Divisiones y Campeones</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        
-        header {
-            background-color: #d20a0a;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        
-        .container {
-            width: 85%;
-            margin: auto;
-            overflow: hidden;
-        }
-        
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        
-        h2 {
-            color: #d20a0a;
-            border-bottom: 2px solid #d20a0a;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        
-        h3 {
-            color: #333;
-        }
-        
-        .intro {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .division {
-            background: white;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        
-        .division-info {
-            flex: 1;
-            min-width: 300px;
-            padding: 15px;
-        }
-        
-        .division-image {
-            flex: 1;
-            min-width: 200px;
-            text-align: center;
-        }
-        
-        .division-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            border: 3px solid #d20a0a;
-        }
-        
-        .champion {
-            background: #f9f9f9;
-            padding: 15px;
-            margin-top: 15px;
-            border-radius: 5px;
-            border-left: 4px solid #d20a0a;
-        }
-        
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        
-        .division-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        
-        .division-table th, .division-table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .division-table th {
-            background-color: #d20a0a;
-            color: white;
-        }
-        
-        .division-table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        @media (max-width: 768px) {
-            .division {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <title>UFC - Proyecto Final</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <style>
+    body,h1,h2,h3,p { font-family: "Raleway", sans-serif }
+    .section { display: none; padding: 64px 16px; }
+    .visible { display: block; }
+    .banner {
+      background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 16px;
+      text-align: center;
+    }
+    .w3-card-4 img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>UFC - Ultimate Fighting Championship</h1>
-            <p>La mayor organización de Artes Marciales Mixtas del mundo</p>
+
+<!-- Menú de navegación -->
+<div class="w3-bar w3-black w3-card-4">
+  <a href="#" class="w3-bar-item w3-button" onclick="showSection('inicio')">Inicio</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="showSection('eventos')">Eventos</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="showSection('peleadores')">Peleadores</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="showSection('historia')">Historia</a>
+</div>
+
+<!-- INICIO -->
+<div id="inicio" class="section visible">
+  <div class="banner">
+    <h1 class="w3-jumbo">Ultimate Fighting Championship</h1>
+    <p class="w3-xlarge">La liga de artes marciales mixtas más famosa del mundo</p>
+  </div>
+  <div class="w3-container">
+    <p style="text-align:center; color:gray;">Público destinatario: Aficionados al deporte, estudiantes interesados en artes marciales mixtas.</p>
+    <h2>Bienvenido</h2>
+    <p>Explora eventos, conoce peleadores y descubre la historia de la UFC.</p>
+  </div>
+</div>
+
+<!-- EVENTOS -->
+<div id="eventos" class="section">
+  <div class="w3-container w3-red w3-center">
+    <h2>Eventos de la UFC</h2>
+    <p>Últimos combates y próximos enfrentamientos</p>
+  </div>
+  <div class="w3-container">
+    <h3>Eventos recientes</h3>
+    <ul>
+      <li>UFC 302: Makhachev vs. Poirier</li>
+      <li>UFC 301: Aldo vs. Yan</li>
+      <li>UFC Fight Night: Vera vs. Sandhagen</li>
+    </ul>
+    <h3>Próximos eventos</h3>
+    <ul>
+      <li>UFC 303: McGregor vs. Chandler</li>
+      <li>UFC 304: Edwards vs. Covington</li>
+    </ul>
+  </div>
+</div>
+
+<!-- PELEADORES -->
+<div id="peleadores" class="section">
+  <div class="w3-container w3-teal w3-center">
+    <h2>Peleadores Destacados</h2>
+  </div>
+  <div class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <div class="w3-card-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Conor_McGregor_2016.jpg" alt="Conor McGregor">
+        <div class="w3-container w3-center">
+          <h3>Conor McGregor</h3>
+          <p>Irlandés - Peso Ligero</p>
         </div>
-    </header>
-    
-    <div class="container">
-        <section id="about-ufc">
-            <div class="intro">
-                <h2>¿Qué es la UFC?</h2>
-                <p>La <strong>Ultimate Fighting Championship (UFC)</strong> es la organización líder en Artes Marciales Mixtas (MMA) a nivel mundial. Fundada en 1993, la UFC ha revolucionado el mundo de los deportes de combate, combinando técnicas de boxeo, jiu-jitsu brasileño, lucha, muay thai, judo y otras disciplinas.</p>
-                
-                <p>La UFC comenzó como un torneo para determinar qué arte marcial era más efectiva, pero evolucionó hacia un deporte organizado con reglas estrictas y categorías de peso. Hoy cuenta con más de 600 peleadores en su roster y realiza eventos en todo el mundo.</p>
-                
-                <p>La organización es conocida por sus emocionantes tarjetas de peleas, personalidades carismáticas y el alto nivel de competencia. Los peleadores de la UFC son considerados los mejores artistas marciales mixtos del planeta.</p>
-            </div>
-        </section>
-        
-        <section id="divisions">
-            <h2>Divisiones de Peso en la UFC</h2>
-            
-            <table class="division-table">
-                <thead>
-                    <tr>
-                        <th>División</th>
-                        <th>Límite de peso</th>
-                        <th>Campeón actual</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Peso Mosca</td>
-                        <td>Hasta 125 lbs (56.7 kg)</td>
-                        <td>Alexandre Pantoja</td>
-                    </tr>
-                    <tr>
-                        <td>Peso Gallo</td>
-                        <td>Hasta 135 lbs (61.2 kg)</td>
-                        <td>Merab Dvilishvilli</td>
-                    </tr>
-                    <tr>
-                        <td>Peso Pluma</td>
-                        <td>Hasta 145 lbs (65.8 kg)</td>
-                        <td>Alexander Volkanovski</td>
-                    </tr>
-                    <tr>
-                        <td>Peso Ligero</td>
-                        <td>Hasta 155 lbs (70.3 kg)</td>
-                        <td>Islam Makhachev</td>
-                    </tr>
-                    <tr>
-                        <td>Peso Welter</td>
-                        <td>Hasta 170 lbs (77.1 kg)</td>
-                        <td>Jack Della Madalena</td>
-                    </tr>
-                    <tr>
-                        <td>Peso Medio</td>
-                        <td>Hasta 185 lbs (83.9 kg)</td>
-                        <td>Dricus Du Plessis</td>
-                    </tr>
-                    <tr>
-                        <td>Peso Semipesado</td>
-                        <td>Hasta 205 lbs (93.0 kg)</td>
-                        <td>Magomed Ankalaev</td>
-                    </tr>
-                    <tr>
-                        <td>Peso Pesado</td>
-                        <td>Hasta 265 lbs (120.2 kg)</td>
-                        <td>Jon Jones (Tom Aspinall interino)</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <h2>Grandes Campeones de la UFC</h2>
-            
-            <div class="division">
-                <div class="division-image">
-                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-07/JOHNSON_DEMETRIOUS_L_07-24.png" alt="Demetrious Johnson">
-                </div>
-                <div class="division-info">
-                    <h3>Peso Mosca: Demetrious "Mighty Mouse" Johnson</h3>
-                    <p>Considerado por muchos como el mejor peso mosca de todos los tiempos, Johnson defendió su título 11 veces consecutivas, récord en la UFC. Conocido por su velocidad, técnica y versatilidad.</p>
-                    <div class="champion">
-                        <p><strong>Récord en UFC:</strong> 15-2-1</p>
-                        <p><strong>Reinado:</strong> 2012-2018</p>
-                        <p><strong>Edad:</strong> 37 años</p>
-                        <p><strong>Estilo:</strong> Wrestling, Jiu-Jitsu Brasileño</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="division">
-                <div class="division-image">
-                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/image/ufc-fighter-container/7266/profile-galery/fullbodyleft-picture/CRUZ_DOMINICK_L.png" alt="Dominick Cruz">
-                </div>
-                <div class="division-info">
-                    <h3>Peso Gallo: Dominick "The Dominator" Cruz</h3>
-                    <p>Uno de los pesos gallo más técnicos de la historia. Cruz revolucionó el movimiento en MMA con su estilo único de footwork y angles. Dos veces campeón de peso gallo de la UFC.</p>
-                    <div class="champion">
-                        <p><strong>Récord en UFC:</strong> 8-3</p>
-                        <p><strong>Reinado:</strong> 2010-2011, 2016</p>
-                        <p><strong>Edad:</strong> 38 años</p>
-                        <p><strong>Estilo:</strong> Boxeo, Wrestling</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="division">
-                <div class="division-image">
-                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-07/ALDO_JOSE_L_07-10.png" alt="José Aldo">
-                </div>
-                <div class="division-info">
-                    <h3>Peso Pluma: José "Scarface" Aldo</h3>
-                    <p>Dominó la división de peso pluma durante una década. Campeón inaugural de peso pluma de la UFC y ex campeón de WEC. Conocido por sus devastadores low kicks y takedown defense.</p>
-                    <div class="champion">
-                        <p><strong>Récord en UFC:</strong> 15-7</p>
-                        <p><strong>Reinado:</strong> 2010-2015</p>
-                        <p><strong>Edad:</strong> 37 años</p>
-                        <p><strong>Estilo:</strong> Muay Thai, Jiu-Jitsu Brasileño</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="division">
-                <div class="division-image">
-                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/image/ufc-fighter-container/6829/profile-galery/fullbodyleft-picture/NURMAGOMEDOV_KHABIB_L.png" alt="Khabib Nurmagomedov">
-                </div>
-                <div class="division-info">
-                    <h3>Peso Ligero: Khabib "The Eagle" Nurmagomedov</h3>
-                    <p>Uno de los peleadores más dominantes en la historia de la UFC. Retirado invicto con récord de 29-0. Su estilo de grappling basado en sambo era casi imposible de contrarrestar.</p>
-                    <div class="champion">
-                        <p><strong>Récord en UFC:</strong> 13-0</p>
-                        <p><strong>Reinado:</strong> 2018-2020</p>
-                        <p><strong>Edad:</strong> 35 años</p>
-                        <p><strong>Estilo:</strong> Sambo, Wrestling</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="division">
-                <div class="division-image">
-                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-07/SILVA_ANDERSON_L_07-11.png" alt="Anderson Silva">
-                </div>
-                <div class="division-info">
-                    <h3>Peso Welter: Anderson "The Spider" Silva</h3>
-                    <p>Aunque más conocido por su reinado en peso medio, Silva también tuvo éxito en peso welter. Considerado por muchos como el mejor striker en la historia de la UFC, con 16 victorias consecutivas.</p>
-                    <div class="champion">
-                        <p><strong>Récord en UFC:</strong> 17-7 (1 NC)</p>
-                        <p><strong>Reinado en Medio:</strong> 2006-2013</p>
-                        <p><strong>Edad:</strong> 48 años</p>
-                        <p><strong>Estilo:</strong> Muay Thai, Taekwondo, Boxeo</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="division">
-                <div class="division-image">
-                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-07/ST-PIERRE_GEORGES_L_07-24.png" alt="Georges St-Pierre">
-                </div>
-                <div class="division-info">
-                    <h3>Peso Medio: Georges "Rush" St-Pierre</h3>
-                    <p>Considerado el mejor peso welter de todos los tiempos, GSP también ganó el título de peso medio. Conocido por su increíble atletismo, disciplina y versatilidad en todas las áreas del juego.</p>
-                    <div class="champion">
-                        <p><strong>Récord en UFC:</strong> 20-2</p>
-                        <p><strong>Reinado en Welter:</strong> 2007-2013</p>
-                        <p><strong>Edad:</strong> 42 años</p>
-                        <p><strong>Estilo:</strong> Kyokushin Karate, Wrestling, Jiu-Jitsu</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="division">
-                <div class="division-image">
-                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/JON_JONES_L_07-29.png" alt="Jon Jones">
-                </div>
-                <div class="division-info">
-                    <h3>Peso Semipesado: Jon "Bones" Jones</h3>
-                    <p>Considerado por muchos como el mejor peleador de todos los tiempos. Dominó la división de peso semipesado durante una década con su alcance único y versatilidad en todas las facetas del juego.</p>
-                    <div class="champion">
-                        <p><strong>Récord en UFC:</strong> 21-1 (1 NC)</p>
-                        <p><strong>Reinado en Semipesado:</strong> 2011-2015, 2017-2020</p>
-                        <p><strong>Edad:</strong> 36 años</p>
-                        <p><strong>Estilo:</strong> Wrestling, Gaidojutsu, Jiu-Jitsu</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="division">
-                <div class="division-image">
-                    <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2021-07/MIOCIC_STIPE_L_07-10.png" alt="Stipe Miocic">
-                </div>
-                <div class="division-info">
-                    <h3>Peso Pesado: Stipe Miocic</h3>
-                    <p>El campeón de peso pesado con más defensas exitosas en la historia de la UFC. Ex bombero profesional, Miocic combinaba poder de golpe con sólidas habilidades de wrestling.</p>
-                    <div class="champion">
-                        <p><strong>Récord en UFC:</strong> 14-4</p>
-                        <p><strong>Reinado:</strong> 2016-2018, 2019-2021</p>
-                        <p><strong>Edad:</strong> 41 años</p>
-                        <p><strong>Estilo:</strong> Boxeo, Wrestling</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      </div>
     </div>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 UFC Fan Page. Esta es una página de aficionados y no está afiliada a la UFC.</p>
-            <p>Todas las imágenes son propiedad de la UFC.</p>
+    <div class="w3-third">
+      <div class="w3-card-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Jon_Jones_2017.jpg" alt="Jon Jones">
+        <div class="w3-container w3-center">
+          <h3>Jon Jones</h3>
+          <p>EE.UU. - Peso Pesado</p>
         </div>
-    </footer>
+      </div>
+    </div>
+    <div class="w3-third">
+      <div class="w3-card-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Amanda_Nunes_2018.jpg" alt="Amanda Nunes">
+        <div class="w3-container w3-center">
+          <h3>Amanda Nunes</h3>
+          <p>Brasil - Peso Gallo Femenino</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HISTORIA -->
+<div id="historia" class="section">
+  <div class="w3-container w3-indigo w3-center">
+    <h2>Historia de la UFC</h2>
+  </div>
+  <div class="w3-container">
+    <h3>Los inicios</h3>
+    <p>La UFC fue fundada en 1993 en Estados Unidos. Su objetivo era descubrir el arte marcial más efectivo.</p>
+
+    <h3>La evolución</h3>
+    <p>Con el paso de los años, la UFC se convirtió en la organización de MMA más grande del mundo.</p>
+
+    <h3>Hoy en día</h3>
+    <p>La UFC organiza eventos internacionales y es seguida por millones de fans en todo el planeta.</p>
+  </div>
+</div>
+
+<!-- PIE DE PÁGINA -->
+<footer class="w3-center w3-padding-32">
+  <p>Plantilla base usada: 
+    <a href="https://www.w3schools.com/w3css/tryw3css_templates_coming_soon.htm" target="_blank">
+      plantilla
+    </a>
+  </p>
+</footer>
+
+<!-- SCRIPT para cambiar secciones -->
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(s => s.classList.remove('visible'));
+    document.getElementById(id).classList.add('visible');
+  }
+</script>
+
 </body>
 </html>
