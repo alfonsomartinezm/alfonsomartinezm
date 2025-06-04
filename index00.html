@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UFC - Proyecto Final</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <style>
+    body,h1,h2,h3,p { font-family: "Raleway", sans-serif }
+    .section { display: none; padding: 64px 16px; }
+    .visible { display: block; }
+    .banner {
+      background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 16px;
+      text-align: center;
+    }
+    .w3-card-4 img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Menú de navegación -->
+<div class="w3-bar w3-black w3-card-4">
+  <a href="#" class="w3-bar-item w3-button" onclick="showSection('inicio')">Inicio</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="showSection('eventos')">Eventos</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="showSection('peleadores')">Peleadores</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="showSection('historia')">Historia</a>
+</div>
+
+<!-- INICIO -->
+<div id="inicio" class="section visible">
+  <div class="banner">
+    <h1 class="w3-jumbo">Ultimate Fighting Championship</h1>
+    <p class="w3-xlarge">La liga de artes marciales mixtas más famosa del mundo</p>
+  </div>
+  <div class="w3-container">
+    <p style="text-align:center; color:gray;">Público destinatario: Aficionados al deporte, estudiantes interesados en artes marciales mixtas.</p>
+    <h2>Bienvenido</h2>
+    <p>Explora eventos, conoce peleadores y descubre la historia de la UFC.</p>
+  </div>
+</div>
+
+<!-- EVENTOS -->
+<div id="eventos" class="section">
+  <div class="w3-container w3-red w3-center">
+    <h2>Eventos de la UFC</h2>
+    <p>Últimos combates y próximos enfrentamientos</p>
+  </div>
+  <div class="w3-container">
+    <h3>Eventos recientes</h3>
+    <ul>
+      <li>UFC 302: Makhachev vs. Poirier</li>
+      <li>UFC 301: Aldo vs. Yan</li>
+      <li>UFC Fight Night: Vera vs. Sandhagen</li>
+    </ul>
+    <h3>Próximos eventos</h3>
+    <ul>
+      <li>UFC 303: McGregor vs. Chandler</li>
+      <li>UFC 304: Edwards vs. Covington</li>
+    </ul>
+  </div>
+</div>
+
+<!-- PELEADORES -->
+<div id="peleadores" class="section">
+  <div class="w3-container w3-teal w3-center">
+    <h2>Peleadores Destacados</h2>
+  </div>
+  <div class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <div class="w3-card-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Conor_McGregor_2016.jpg" alt="Conor McGregor">
+        <div class="w3-container w3-center">
+          <h3>Conor McGregor</h3>
+          <p>Irlandés - Peso Ligero</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third">
+      <div class="w3-card-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Jon_Jones_2017.jpg" alt="Jon Jones">
+        <div class="w3-container w3-center">
+          <h3>Jon Jones</h3>
+          <p>EE.UU. - Peso Pesado</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third">
+      <div class="w3-card-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Amanda_Nunes_2018.jpg" alt="Amanda Nunes">
+        <div class="w3-container w3-center">
+          <h3>Amanda Nunes</h3>
+          <p>Brasil - Peso Gallo Femenino</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HISTORIA -->
+<div id="historia" class="section">
+  <div class="w3-container w3-indigo w3-center">
+    <h2>Historia de la UFC</h2>
+  </div>
+  <div class="w3-container">
+    <h3>Los inicios</h3>
+    <p>La UFC fue fundada en 1993 en Estados Unidos. Su objetivo era descubrir el arte marcial más efectivo.</p>
+
+    <h3>La evolución</h3>
+    <p>Con el paso de los años, la UFC se convirtió en la organización de MMA más grande del mundo.</p>
+
+    <h3>Hoy en día</h3>
+    <p>La UFC organiza eventos internacionales y es seguida por millones de fans en todo el planeta.</p>
+  </div>
+</div>
+
+<!-- PIE DE PÁGINA -->
+<footer class="w3-center w3-padding-32">
+  <p>Plantilla base usada: 
+    <a href="https://www.w3schools.com/w3css/tryw3css_templates_coming_soon.htm" target="_blank">
+      plantilla
+    </a>
+  </p>
+</footer>
+
+<!-- SCRIPT para cambiar secciones -->
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(s => s.classList.remove('visible'));
+    document.getElementById(id).classList.add('visible');
+  }
+</script>
+
+</body>
+</html>
