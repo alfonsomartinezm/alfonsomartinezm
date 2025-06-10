@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mundo UFC</title>
+<title>UFC - Ultimate Fighting Championship</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: "Times New Roman", Georgia, Serif;}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display";
-  letter-spacing: 5px;
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2021-07/UFC_264_PPV_ES-HERO.jpg');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2023-02/ufc-284-makhachev-volkanovski-hero.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2023-07/ufc-290-volk-yair-ppv-hero.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+/* Custom UFC colors */
+.ufc-red {
+  color: #fff;
+  background-color: #d20a0a !important;
+}
+
+.ufc-black {
+  color: #fff;
+  background-color: #000 !important;
+}
+
+.ufc-navbar {
+  background-color: rgba(0, 0, 0, 0.8) !important;
 }
 </style>
 </head>
@@ -17,90 +72,359 @@ h1, h2, h3, h4, h5, h6 {
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="#home" class="w3-bar-item w3-button">Mundo UFC</a>
-    <!-- Right-sided navbar links. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">jjjAcerca de</a>
-      <a href="#fighters" class="w3-bar-item w3-button">jjjLuchadores</a>
-      <a href="#events" class="w3-bar-item w3-button">jjjEventos</a>
+  <div class="w3-bar ufc-black" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html" class="w3-bar-item w3-button">INICIO</a>
+    <a href="historia.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i> HISTORIA</a>
+    <a href="luchadores.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> LUCHADORES</a>
+    <a href="eventos.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-calendar"></i> EVENTOS</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block ufc-black w3-hide w3-hide-large w3-hide-medium">
+    <a href="historia.html" class="w3-bar-item w3-button" onclick="toggleFunction()">HISTORIA</a>
+    <a href="luchadores.html" class="w3-bar-item w3-button" onclick="toggleFunction()">LUCHADORES</a>
+    <a href="eventos.html" class="w3-bar-item w3-button" onclick="toggleFunction()">EVENTOS</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large ufc-red w3-xlarge w3-wide w3-animate-opacity">UFC <span class="w3-hide-small">ULTIMATE FIGHTING CHAMPIONSHIP</span></span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">BIENVENIDO AL MUNDO DE LA UFC</h3>
+  <p class="w3-center"><em>La organización de artes marciales mixtas más importante del mundo</em></p>
+  <p>La Ultimate Fighting Championship (UFC) es la mayor organización de artes marciales mixtas (MMA) en el mundo, que alberga a los mejores luchadores del planeta en su octágono. Fundada en 1993, la UFC ha crecido hasta convertirse en un fenómeno global, con eventos en todo el mundo y millones de fanáticos.</p>
+  <p>En esta web encontrarás información sobre la historia de la organización, los luchadores más destacados, los próximos eventos y mucho más. ¡Sumérgete en el emocionante mundo de las MMA!</p>
+  
+  <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">30+</span><br>
+      Años de Historia
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">12</span><br>
+      Divisiones de Peso
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">500+</span><br>
+      Luchadores
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">40+</span><br>
+      Eventos por Año
     </div>
   </div>
 </div>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <img class="w3-image" src="https://www.ufc.com/sites/default/files/styles/hero_image/public/2023-09/ufc293_mainevent_0.png?h=3342785f&itok=Zj0qQq2D" alt="Banner UFC" width="1600" height="800">
-  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-    <h1 class="w3-xxlarge">Bienvenido a Mundo UFC</h1>
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">LUCHADORES DESTACADOS</span>
   </div>
-</header>
+</div>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">ESTRELLAS DEL OCTÁGONO</h3>
+  <p class="w3-center"><em>Conoce a algunos de los mejores luchadores de la UFC</em></p><br>
 
-  <!-- About Section -->
-  <div class="w3-row w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large w3-hide-small">
-     <img src="https://www.ufc.com/sites/default/files/styles/athlete_detail/public/2023-09/Conor_McGregor_2023_0.png?h=3342785f&itok=Zj0qQq2D" class="w3-round w3-image w3-opacity-min" alt="Conor McGregor" width="600" height="750">
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/VOLKANOVSKI_ALEXANDER_L_BELTMOCK.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Alexander Volkanovski">
+      <p>Alexander Volkanovski<br>Campeón Peso Pluma</p>
     </div>
 
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">Acerca de UFC</h1><br>
-      <h5 class="w3-center">El Ultimate Fighting Championship</h5>
-      <p class="w3-large">El UFC fue fundado en 1993 y desde entonces se ha convertido en la organización líder para las competencias de artes marciales mixtas (MMA). Reúne a los mejores luchadores de todo el mundo que compiten en diversas categorías de peso y estilos. El UFC promueve eventos a nivel mundial y es conocido por sus emocionantes peleas y atletas dinámicos.</p>
-      <p class="w3-large w3-text-grey w3-hide-medium">El UFC ha crecido desde un evento pequeño y subterráneo hasta convertirse en un fenómeno mundial, con millones de fanáticos siguiendo la acción. También ha desempeñado un papel crucial en la legitimización del MMA como un deporte mainstream.</p>
+    <div class="w3-col m3">
+      <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/ADESANYA_ISRAEL_L_BELTMOCK.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Israel Adesanya">
+      <p>Israel Adesanya<br>Ex Campeón Peso Mediano</p>
     </div>
-  </div>
-  
-  <hr>
-  
-  <!-- Fighters Section -->
-  <div class="w3-row w3-padding-64" id="fighters">
-    <div class="w3-col l6 w3-padding-large">
-      <h1 class="w3-center">Principales Luchadores</h1><br>
-      <h4>Conor McGregor</h4>
-      <p class="w3-text-grey">Luchador irlandés conocido por su poder de nocaut y carisma.</p><br>
-    
-      <h4>Khabib Nurmagomedov</h4>
-      <p class="w3-text-grey">Luchador ruso con un récord invicto.</p><br>
-    
-      <h4>Amanda Nunes</h4>
-      <p class="w3-text-grey">Campeona brasileña en las divisiones de peso gallo y pluma femenino.</p><br>
+
+    <div class="w3-col m3">
+      <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/EDWARDS_LEON_L_BELTMOCK.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Leon Edwards">
+      <p>Leon Edwards<br>Campeón Peso Wélter</p>
     </div>
-    
-    <div class="w3-col l6 w3-padding-large">
-      <img src="https://www.ufc.com/sites/default/files/styles/athlete_detail/public/2023-09/Amanda_Nunes_2023_0.png?h=3342785f&itok=Zj0qQq2D" class="w3-round w3-image w3-opacity-min" alt="Luchadores" style="width:100%">
+
+    <div class="w3-col m3">
+      <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2023-07/JONES_JON_L_BELTMOCK.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Jon Jones">
+      <p>Jon Jones<br>Campeón Peso Pesado</p>
     </div>
   </div>
+  <div class="w3-center">
+    <a href="luchadores.html" class="w3-button ufc-red w3-padding-large w3-margin-top">VER MÁS LUCHADORES</a>
+  </div>
+</div>
 
-  <hr>
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">PRÓXIMOS EVENTOS</span>
+  </div>
+</div>
 
-  <!-- Events Section -->
-  <div class="w3-row w3-padding-64" id="events">
-    <div class="w3-col l6 w3-padding-large">
-      <h1 class="w3-center">Próximos Eventos</h1><br>
-      <h4>UFC 295</h4>
-      <p class="w3-text-grey">Fecha: 15 de julio de 2023</p>
-      <p class="w3-text-grey">Lugar: Las Vegas, NV</p><br>
-    
-      <h4>UFC 296</h4>
-      <p class="w3-text-grey">Fecha: 20 de agosto de 2023</p>
-      <p class="w3-text-grey">Lugar: Londres, Reino Unido</p><br>
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">NO TE PIERDAS LOS PRÓXIMOS COMBATES</h3>
+  <p class="w3-center"><em>Revive la emoción de la UFC en directo</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m6 w3-container">
+      <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_upper_card/s3/2023-10/ufc-294-makhachev-volkanovski.jpg" class="w3-image w3-round" style="width:100%">
     </div>
-    
-    <div class="w3-col l6 w3-padding-large">
-      <img src="https://www.ufc.com/sites/default/files/styles/athlete_detail/public/2023-09/Khabib_Nurmagomedov_2023_0.png?h=3342785f&itok=Zj0qQq2D" class="w3-round w3-image w3-opacity-min" alt="Eventos" style="width:100%">
+    <div class="w3-col m6 w3-panel">
+      <h4>UFC 294: Makhachev vs Volkanovski 2</h4>
+      <p><i class="fa fa-calendar fa-fw w3-margin-right"></i> 21 de Octubre, 2023</p>
+      <p><i class="fa fa-map-marker fa-fw w3-margin-right"></i> Abu Dhabi, EAU</p>
+      <p>Revancha por el título ligero entre Islam Makhachev y Alexander Volkanovski en el duelo más esperado del año.</p>
+      <a href="eventos.html" class="w3-button ufc-red">VER TODOS LOS EVENTOS</a>
     </div>
   </div>
-
-<!-- End page content -->
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-32">
-  <p>Plantilla utilizada: <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">W3.CSS</a></p>
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Volver arriba</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-youtube w3-hover-opacity"></i>
+  </div>
+  <p>Página creada para el proyecto de Digitalización - 4º ESO</p>
+  <p>Público destinatario: Jóvenes y adultos de 15 a 45 años interesados en deportes de contacto y artes marciales mixtas.</p>
+  <p>Plantilla utilizada: <a href="https://www.w3schools.com/w3css/tryw3css_templates_parallax.htm" target="_blank">Plantilla Parallax de W3.CSS</a></p>
 </footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Historia de la UFC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2021-11/UFC_268_ES_Hero.jpg');
+  min-height: 100%;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+/* Custom UFC colors */
+.ufc-red {
+  color: #fff;
+  background-color: #d20a0a !important;
+}
+
+.ufc-black {
+  color: #fff;
+  background-color: #000 !important;
+}
+
+.ufc-navbar {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #d20a0a;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container-tl {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container-tl::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #d20a0a;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #f1f1f1;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #f1f1f1;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #f1f1f1;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #f1f1f1 transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: #f1f1f1;
+  position: relative;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .container-tl {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .container-tl::before {
+    left: 60px;
+    border: medium solid #f1f1f1;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #f1f1f1 transparent transparent;
+  }
+  
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  .right {
+    left: 0%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar ufc-black" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html" class="w3-bar-item w3-button">INICIO</a>
+    <a href="historia.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i> HISTORIA</a>
+    <a href="luchadores.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> LUCHADORES</a>
+    <a href="eventos.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-calendar"></i> EVENTOS</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block ufc-black w3-hide w3-hide-large w3-hide-medium">
+    <a href="historia.html" class="w3-bar-item w3-button" onclick="toggleFunction()">HISTORIA</a>
+    <a href="luchadores.html" class="w3-bar-item w3-button" onclick="toggleFunction()">LUCHADORES</a>
+    <a href="eventos.html" class="w3-bar-item w3-button" onclick="toggleFunction()">EVENTOS</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white
