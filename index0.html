@@ -1,176 +1,216 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>UFC Fan Zone - Página Principal</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- W3.CSS -->
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-<!-- Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<title>UFC Fan Zone - Web Única</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- W3.CSS base -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+<!-- Fuentes -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
 <!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <style>
-  h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
-  body {font-family: "Open Sans"}
-  .w3-bar .w3-button {padding:16px;}
+  /* Estilos generales */
+  body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-family: "Oswald", sans-serif;
+  }
+  /* Navbar estilo base */
+  .w3-bar .w3-button {
+    padding: 16px;
+    cursor: pointer;
+  }
+  /* Secciones ocultas */
+  section {
+    display: none;
+  }
+  section.active {
+    display: block;
+  }
+
+  /* Estilos para páginas info (secundarias) */
+  .info-section {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  .info-section h1,h2,h3 {
+    font-family: Verdana, sans-serif;
+  }
+  /* Contenido de barra de navegación para ambas plantillas */
+  .nav-black {
+    background-color: #000;
+    color: #fff;
+  }
+  .nav-black a {
+    color: white;
+    text-decoration: none;
+  }
+  /* Footer enlaces plantilla */
+  .template-link {
+    margin-top: 40px;
+    font-size: 0.9em;
+  }
+  /* Público destinatario texto */
+  .publico {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: #555;
+  }
 </style>
 </head>
 <body class="w3-light-grey">
 
-<!-- Navigation bar -->
+<!-- Navbar común -->
 <div class="w3-bar w3-black w3-hide-small">
-  <a href="index.html" class="w3-bar-item w3-button jjj-home">jjj Home</a>
-  <a href="jjj-fighters.html" class="w3-bar-item w3-button jjj-fighters">jjj Fighters</a>
-  <a href="jjj-events.html" class="w3-bar-item w3-button jjj-events">jjj Events</a>
-  <a href="jjj-history.html" class="w3-bar-item w3-button jjj-history">jjj History</a>
+  <a class="w3-bar-item w3-button jjj-home" onclick="showSection('principal')">jjj Home</a>
+  <a class="w3-bar-item w3-button jjj-fighters" onclick="showSection('fighters')">jjj Fighters</a>
+  <a class="w3-bar-item w3-button jjj-events" onclick="showSection('events')">jjj Events</a>
+  <a class="w3-bar-item w3-button jjj-history" onclick="showSection('history')">jjj History</a>
   <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
 </div>
 
-<!-- Content container -->
-<div class="w3-content" style="max-width:1600px">
+<!-- CONTENIDO PRINCIPAL -->
+<section id="principal" class="active">
+  <div class="w3-content" style="max-width:1600px">
 
-  <!-- Header -->
-  <header class="w3-container w3-center w3-padding-48 w3-white">
-    <h1 class="w3-xxxlarge"><b>UFC FAN ZONE</b></h1>
-    <h6>Welcome to the ultimate Ultimate Fighting Championship fan site</h6>
-  </header>
+    <!-- Header principal -->
+    <header class="w3-container w3-center w3-padding-48 w3-white">
+      <h1 class="w3-xxxlarge"><b>UFC FAN ZONE</b></h1>
+      <h6>Welcome to the ultimate Ultimate Fighting Championship fan site</h6>
+      <p class="publico">Público destinatario: aficionados de MMA y UFC, interesados en noticias, eventos y historia (según Classroom)</p>
+    </header>
 
-  <!-- Image header -->
-  <header class="w3-display-container w3-wide" id="home">
-    <img class="w3-image" src="https://images.unsplash.com/photo-1590073240991-8c83cd3506b9?auto=format&fit=crop&w=1600&q=80" alt="UFC Fight" width="1600" height="900">
-    <div class="w3-display-left w3-padding-large">
-      <h1 class="w3-text-white">Welcome to</h1>
-      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>UFC FAN ZONE</b></h1>
-      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="alert('Thanks for subscribing!')">SUBSCRIBE</button></h6>
-    </div>
-  </header>
+    <!-- Imagen header -->
+    <header class="w3-display-container w3-wide" id="home">
+      <img
+        class="w3-image"
+        src="https://images.unsplash.com/photo-1590073240991-8c83cd3506b9?auto=format&fit=crop&w=1600&q=80"
+        alt="UFC Fight"
+        width="1600"
+        height="900"
+      />
+      <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Welcome to</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>UFC FAN ZONE</b></h1>
+        <h6>
+          <button
+            class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off"
+            onclick="alert('Thanks for subscribing!')"
+          >
+            SUBSCRIBE
+          </button>
+        </h6>
+      </div>
+    </header>
 
-  <!-- Main grid -->
-  <div class="w3-row w3-padding w3-border">
-
-    <!-- Main content -->
-    <div class="w3-col l8 s12">
-      <div class="w3-container w3-white w3-margin w3-padding-large">
-        <div class="w3-center">
-          <h3>Latest UFC News</h3>
-          <h5>Stay updated with the biggest fights and fighter news <span class="w3-opacity">June 2025</span></h5>
-        </div>
-        <div class="w3-justify">
-          <img src="https://images.unsplash.com/photo-1552566626-52ac1e77aa99?auto=format&fit=crop&w=800&q=80" alt="UFC Fight" style="width:100%" class="w3-padding-16">
-          <p><strong>Upcoming UFC 300 Event!</strong> The UFC is gearing up for its 300th event featuring some of the best fighters in history. Stay tuned for fight cards, ticket info, and more.</p>
-          <p>Explore fighter profiles, history, and latest events through our site. Dive into the world of mixed martial arts like never before!</p>
-          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-          <p class="w3-right"><button class="w3-button w3-black" onclick="toggleReplies('replies1')" id="btn1"><b>Replies  </b> <span class="w3-tag w3-white">3</span></button></p>
-          <p class="w3-clear"></p>
-          <div class="w3-row w3-margin-bottom" id="replies1" style="display:none">
-            <hr>
-            <div class="w3-col l2 m3">
-              <img src="https://randomuser.me/api/portraits/men/11.jpg" style="width:90px;">
-            </div>
-            <div class="w3-col l10 m9">
-              <h4>John <span class="w3-opacity w3-medium">June 5, 2025</span></h4>
-              <p>Can't wait for UFC 300! The fight cards look insane.</p>
+    <!-- Grid contenido -->
+    <div class="w3-row w3-padding w3-border">
+      <!-- Main content -->
+      <div class="w3-col l8 s12">
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+          <div class="w3-center">
+            <h3>Latest UFC News</h3>
+            <h5>Stay updated with the biggest fights and fighter news <span class="w3-opacity">June 2025</span></h5>
+          </div>
+          <div class="w3-justify">
+            <img
+              src="https://images.unsplash.com/photo-1552566626-52ac1e77aa99?auto=format&fit=crop&w=800&q=80"
+              alt="UFC Fight"
+              style="width:100%"
+              class="w3-padding-16"
+            />
+            <p><strong>Upcoming UFC 300 Event!</strong> The UFC is gearing up for its 300th event featuring some of the best fighters in history. Stay tuned for fight cards, ticket info, and more.</p>
+            <p>Explore fighter profiles, history, and latest events through our site. Dive into the world of mixed martial arts like never before!</p>
+            <p class="w3-left">
+              <button class="w3-button w3-white w3-border" onclick="likeFunction(this)">
+                <b><i class="fa fa-thumbs-up"></i> Like</b>
+              </button>
+            </p>
+            <p class="w3-right">
+              <button class="w3-button w3-black" onclick="toggleReplies('replies1')" id="btn1">
+                <b>Replies  </b> <span class="w3-tag w3-white">3</span>
+              </button>
+            </p>
+            <p class="w3-clear"></p>
+            <div class="w3-row w3-margin-bottom" id="replies1" style="display:none">
+              <hr />
+              <div class="w3-col l2 m3">
+                <img src="https://randomuser.me/api/portraits/men/11.jpg" style="width:90px;" />
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>John <span class="w3-opacity w3-medium">June 5, 2025</span></h4>
+                <p>Can't wait for UFC 300! The fight cards look insane.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Sidebar -->
+      <div class="w3-col l4">
+        <div class="w3-white w3-margin">
+          <img
+            src="https://images.unsplash.com/photo-1557930266-444ba323865e?auto=format&fit=crop&w=400&q=80"
+            alt="UFC fighter"
+            style="width:100%"
+            class="w3-grayscale"
+          />
+          <div class="w3-container w3-black">
+            <h4>About UFC Fan Zone</h4>
+            <p>This website is for all MMA and UFC enthusiasts who want the latest news, fighter info, event details, and UFC history.</p>
+          </div>
+        </div>
+        <hr />
+
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Popular Pages</h4>
+          </div>
+          <ul class="w3-ul w3-hoverable w3-white">
+            <li><a href="#" onclick="showSection('fighters')" class="jjj-fighters">jjj Fighters Profiles</a></li>
+            <li><a href="#" onclick="showSection('events')" class="jjj-events">jjj Upcoming Events</a></li>
+            <li><a href="#" onclick="showSection('history')" class="jjj-history">jjj UFC History</a></li>
+          </ul>
+        </div>
+        <hr />
+
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Follow Us</h4>
+          </div>
+          <div class="w3-container w3-xlarge w3-padding">
+            <a href="#" class="w3-hover-opacity"><i class="fa fa-facebook-official"></i></a>
+            <a href="#" class="w3-hover-opacity"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="w3-hover-opacity"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="w3-hover-opacity"><i class="fa fa-youtube-play"></i></a>
+          </div>
+        </div>
+        <hr />
+
+        <!-- Link plantilla -->
+        <div class="w3-container w3-center w3-padding-8">
+          <a href="https://www.w3schools.com/w3css/tryw3css_templates_blog.htm" target="_blank" class="w3-text-blue">plantilla usada para la página principal</a>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- Sidebar -->
-    <div class="w3-col l4">
-      <div class="w3-white w3-margin">
-        <img src="https://images.unsplash.com/photo-1557930266-444ba323865e?auto=format&fit=crop&w=400&q=80" alt="UFC fighter" style="width:100%" class="w3-grayscale">
-        <div class="w3-container w3-black">
-          <h4>About UFC Fan Zone</h4>
-          <p>This website is for all MMA and UFC enthusiasts who want the latest news, fighter info, event details, and UFC history.</p>
-        </div>
-      </div>
-      <hr>
-
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-black">
-          <h4>Popular Pages</h4>
-        </div>
-        <ul class="w3-ul w3-hoverable w3-white">
-          <li><a href="jjj-fighters.html">jjj Fighters Profiles</a></li>
-          <li><a href="jjj-events.html">jjj Upcoming Events</a></li>
-          <li><a href="jjj-history.html">jjj UFC History</a></li>
-        </ul>
-      </div>
-      <hr>
-
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-black">
-          <h4>Follow Us</h4>
-        </div>
-        <div class="w3-container w3-xlarge w3-padding">
-          <a href="#" class="w3-hover-opacity"><i class="fa fa-facebook-official"></i></a>
-          <a href="#" class="w3-hover-opacity"><i class="fa fa-instagram"></i></a>
-          <a href="#" class="w3-hover-opacity"><i class="fa fa-twitter"></i></a>
-          <a href="#" class="w3-hover-opacity"><i class="fa fa-youtube-play"></i></a>
-        </div>
-      </div>
-      <hr>
-
-      <!-- Template link -->
-      <div class="w3-container w3-center w3-padding-8">
-        <a href="https://www.w3schools.com/w3css/tryw3css_templates_blog.htm" target="_blank" class="w3-text-blue">plantilla usada para la página principal</a>
-      </div>
-
-    </div>
-
+<!-- Página secundaria: Fighters -->
+<section id="fighters" class="info-section">
+  <div class="w3-bar w3-black nav-black w3-hide-small">
+    <a class="w3-bar-item w3-button jjj-home" onclick="showSection('principal')">jjj Home</a>
+    <a class="w3-bar-item w3-button jjj-fighters" onclick="showSection('fighters')">jjj Fighters</a>
+    <a class="w3-bar-item w3-button jjj-events" onclick="showSection('events')">jjj Events</a>
+    <a class="w3-bar-item w3-button jjj-history" onclick="showSection('history')">jjj History</a>
   </div>
 
-</div>
-
-<script>
-function likeFunction(btn) {
-  let count = btn.getAttribute('data-likes') || 0;
-  count++;
-  btn.setAttribute('data-likes', count);
-  btn.innerHTML = '<b><i class="fa fa-thumbs-up"></i> Like (' + count + ')</b>';
-}
-
-function toggleReplies(id) {
-  const e = document.getElementById(id);
-  if (e.style.display === 'none') {
-    e.style.display = 'block';
-  } else {
-    e.style.display = 'none';
-  }
-}
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-<title>jjj Fighters - UFC Fan Zone</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- W3.CSS Simple -->
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-  body {font-family: "Arial", sans-serif;}
-  h1,h2,h3 {font-family: "Verdana", sans-serif;}
-  a {text-decoration:none;}
-</style>
-</head>
-<body>
-
-<!-- Navbar -->
-<div class="w3-bar w3-black">
-  <a href="index.html" class="w3-bar-item w3-button jjj-home">jjj Home</a>
-  <a href="jjj-fighters.html" class="w3-bar-item w3-button jjj-fighters">jjj Fighters</a>
-  <a href="jjj-events.html" class="w3-bar-item w3-button jjj-events">jjj Events</a>
-  <a href="jjj-history.html" class="w3-bar-item w3-button jjj-history">jjj History</a>
-</div>
-
-<!-- Content -->
-<div class="w3-container w3-padding-large">
   <h1>Fighters Profiles</h1>
   <p>Discover the top UFC fighters and their stats.</p>
 
@@ -181,9 +221,98 @@ function toggleReplies(id) {
     <li><b>Conor McGregor</b> - Lightweight Contender</li>
   </ul>
 
-  <!-- Link to template -->
-  <p><a href="https://www.w3schools.com/w3css/4/w3.css" target="_blank">plantilla usada para páginas info</a></p>
-</div>
+  <p class="template-link">
+    <a href="https://www.w3schools.com/w3css/4/w3.css" target="_blank">plantilla usada para páginas info</a>
+  </p>
+</section>
+
+<!-- Página secundaria: Events -->
+<section id="events" class="info-section">
+  <div class="w3-bar w3-black nav-black w3-hide-small">
+    <a class="w3-bar-item w3-button jjj-home" onclick="showSection('principal')">jjj Home</a>
+    <a class="w3-bar-item w3-button jjj-fighters" onclick="showSection('fighters')">jjj Fighters</a>
+    <a class="w3-bar-item w3-button jjj-events" onclick="showSection('events')">jjj Events</a>
+    <a class="w3-bar-item w3-button jjj-history" onclick="showSection('history')">jjj History</a>
+  </div>
+
+  <h1>Upcoming UFC Events</h1>
+  <p>Don't miss the next big fights and UFC events.</p>
+
+  <ul class="w3-ul w3-hoverable">
+    <li>UFC 300 - July 15, 2025 - Las Vegas, NV</li>
+    <li>UFC Fight Night - August 2, 2025 - New York, NY</li>
+    <li>UFC Lightweight Grand Prix - September 10, 2025 - Los Angeles, CA</li>
+  </ul>
+
+  <p class="template-link">
+    <a href="https://www.w3schools.com/w3css/4/w3.css" target="_blank">plantilla usada para páginas info</a>
+  </p>
+</section>
+
+<!-- Página secundaria: History -->
+<section id="history" class="info-section">
+  <div class="w3-bar w3-black nav-black w3-hide-small">
+    <a class="w3-bar-item w3-button jjj-home" onclick="showSection('principal')">jjj Home</a>
+    <a class="w3-bar-item w3-button jjj-fighters" onclick="showSection('fighters')">jjj Fighters</a>
+    <a class="w3-bar-item w3-button jjj-events" onclick="showSection('events')">jjj Events</a>
+    <a class="w3-bar-item w3-button jjj-history" onclick="showSection('history')">jjj History</a>
+  </div>
+
+  <h1>History of UFC</h1>
+  <p>Learn about the origins and milestones of the Ultimate Fighting Championship.</p>
+
+  <p>
+    UFC was founded in 1993 as a tournament to find the most effective martial art in a real fight. Since then, it has evolved into the premier MMA organization in the world, with legendary fighters and epic events.
+  </p>
+
+  <p class="template-link">
+    <a href="https://www.w3schools.com/w3css/4/w3.css" target="_blank">plantilla usada para páginas info</a>
+  </p>
+</section>
+
+<script>
+  // Mostrar una sección y ocultar las demás
+  function showSection(id) {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(section => {
+      if (section.id === id) {
+        section.classList.add("active");
+      } else {
+        section.classList.remove("active");
+      }
+    });
+    // Para navegación más accesible, podemos cambiar el hash:
+    history.replaceState(null, '', '#' + id);
+  }
+
+  // Función Like para la página principal
+  function likeFunction(btn) {
+    let count = btn.getAttribute("data-likes") || 0;
+    count++;
+    btn.setAttribute("data-likes", count);
+    btn.innerHTML = '<b><i class="fa fa-thumbs-up"></i> Like (' + count + ")</b>";
+  }
+
+  // Toggle replies en principal
+  function toggleReplies(id) {
+    const e = document.getElementById(id);
+    if (e.style.display === "none") {
+      e.style.display = "block";
+    } else {
+      e.style.display = "none";
+    }
+  }
+
+  // Si queremos que al cargar detecte hash y muestre sección:
+  window.onload = function() {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      showSection(hash);
+    } else {
+      showSection("principal");
+    }
+  };
+</script>
 
 </body>
 </html>
